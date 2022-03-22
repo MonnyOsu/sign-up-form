@@ -14,7 +14,7 @@ function checkPassword() {
     } else {
         confirmPassword.style.border = "2px solid red";
         submitButton.disabled = true;
-    }
+    } 
 
 }
 
