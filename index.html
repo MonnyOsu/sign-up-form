@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Sign Up Form</title>
+  </head>
+  <body>
+    <!-- transparent nav -->
+
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">Shop</a></li>
+        <li class="nav-item"><a href="#">Instagram</a></li>
+        <li class="nav-item"><a href="#">Sign Up</a></li>
+      </ul>
+    </nav>
+
+    <!-- image -->
+    <div class="page-wrap">
+      <div class="image-wrapper">
+        <img src="./skate.jpg" alt="skateboarding" />
+        <div class="logo">Donuts Only</div>
+        <figcaption class="caption">
+          Photo by
+          <a
+            href="https://unsplash.com/@ballonandon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Ben Allan</a
+          >
+          on
+          <a
+            href="https://unsplash.com/s/photos/skateboarding?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </figcaption>
+      </div>
+
+      <!-- form -->
+      <div class="sign-up-wrapper">
+        <div class="heading-wrap">
+          <h2 class="form-heading">Join the club</h2>
+          <p class="subheading">
+            Sign up to receive info on the latest products and offers
+          </p>
+        </div>
+        <form action="#" class="form" data-sign-up-form>
+          <div class="form-wrap">
+            <div class="input-wrap">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" required />
+            </div>
+
+            <div class="input-wrap">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" required />
+            </div>
+
+            <div class="email-wrap input-wrap">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="input-wrap">
+              <label for="phone">Phone number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="^[0-9]+$"
+                required
+              />
+            </div>
+
+            <div class="input-wrap password-wrap">
+              <label for="pword">Password</label>
+              <input
+                type="password"
+                id="pword"
+                name="pword"
+                minlength="6"
+                data-password
+                required
+              />
+              <span class="tool-tip tool-tip-password"
+                >Minimum 6 characters</span
+              >
+            </div>
+            <div class="input-wrap confirm-wrap">
+              <label for="pword-confirm">Confirm Password</label>
+              <input
+                type="password"
+                id="pword-confirm"
+                name="pword-confirm"
+                minlength="6"
+                data-confirm-password
+                required
+              />
+              <span class="tool-tip tool-tip-confirm"
+                >Passwords must match</span
+              >
+            </div>
+
+            <div class="button-wrap">
+              <button type="submit" data-submit-button>Sign up</button>
+              <p class="log-in">
+                Already have an account? <a href="#">Log in</a>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

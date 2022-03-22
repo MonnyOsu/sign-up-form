@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Staatliches&display=swap");
+
+body {
+  margin: 0;
+  font-family: "open sans", serif;
+}
+
+.navbar {
+  width: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 3em;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  padding-right: 2em;
+}
+
+.page-wrap {
+  height: calc(100vh - 3em);
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 40%;
+  max-width: 40%;
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%) translateY(-55%);
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-family: "Staatliches", "open sans", serif;
+  color: white;
+  font-size: 3rem;
+  background-color: hsl(0, 0%, 91%, 0.4);
+}
+
+.caption {
+  position: absolute;
+  bottom: 1%;
+  left: 5px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.sign-up-wrapper {
+  position: absolute;
+  transform: translateY(-5%);
+  width: 60%;
+  height: 100vh;
+  top: 3em;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.heading-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrap {
+  width: 100%;
+  min-width: 400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "first-name last-name"
+    "email phone"
+    "password confirm-password";
+}
+
+input {
+  width: 20em;
+  padding: 0.6em 0.8em;
+  border-radius: 5px;
+  border: 1px solid hsl(240, 1%, 82%);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #343a40;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="tel"]:valid {
+  border: 2px solid green;
+}
+
+#pword:valid {
+  border: 2px solid green;
+}
+
+.password-wrap,
+.confirm-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.tool-tip {
+  position: absolute;
+  padding: 5px;
+  background-color: white;
+  text-align: center;
+  font-size: 0.7rem;
+  border: 1px solid hsl(240, 1%, 82%);
+  border-radius: 5px;
+  visibility: hidden;
+  bottom: 70%;
+  left: 53%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.tool-tip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: hsl(240, 1%, 82%) transparent transparent transparent;
+}
+
+.password-wrap:hover .tool-tip,
+.confirm-wrap:hover .tool-tip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 0.7em 1em;
+}
+
+label {
+  font-size: 0.8rem;
+}
+
+.button-wrap {
+  margin: 0.7em 1em;
+}
+
+button {
+  padding: 0.7em 2.5em;
+  border-radius: 5px;
+  border: none;
+  background-color: #6c757d;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #343a40;
+}
+
+.log-in {
+  font-size: 0.8em;
+}
+
+.log-in a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1250px) {
+  .form-wrap {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "first-name"
+      "last-name"
+      "email"
+      "phone"
+      "password"
+      "confirm-password";
+  }
+}
