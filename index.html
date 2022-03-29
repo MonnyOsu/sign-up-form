@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
     <title>Sign Up Form</title>
   </head>
@@ -51,17 +55,40 @@
           <div class="form-wrap">
             <div class="input-wrap">
               <label for="first-name">First Name</label>
-              <input type="text" id="first-name" name="first-name" required />
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                minlength="1"
+                data-first-name
+                required
+              />
+              <span class="material-icons tick"> check_circle </span>
+              <span class="material-icons error"> error </span>
             </div>
 
             <div class="input-wrap">
               <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" name="last-name" required />
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                minlength="1"
+                data-last-name
+                required
+              />
+              <span class="material-icons tick"> check_circle </span>
+              <span class="material-icons error"> error </span>
             </div>
 
             <div class="email-wrap input-wrap">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="email" data-email required />
+              <span class="material-icons tick"> check_circle </span>
+              <span class="material-icons error"> error </span>
+              <span class="tool-tip tool-tip-confirm"
+                >Email must be a valid format</span
+              >
             </div>
             <div class="input-wrap">
               <label for="phone">Phone number</label>
@@ -70,8 +97,15 @@
                 id="phone"
                 name="phone"
                 pattern="^[0-9]+$"
+                minlength="9"
+                data-phone
                 required
               />
+              <span class="material-icons tick"> check_circle </span>
+              <span class="material-icons error"> error </span>
+              <span class="tool-tip tool-tip-confirm"
+                >Phone number must be at least 9 digits</span
+              >
             </div>
 
             <div class="input-wrap password-wrap">
@@ -84,6 +118,8 @@
                 data-password
                 required
               />
+              <span class="material-icons tick"> check_circle </span>
+              <span class="material-icons error"> error </span>
               <span class="tool-tip tool-tip-password"
                 >Minimum 6 characters</span
               >
@@ -98,6 +134,8 @@
                 data-confirm-password
                 required
               />
+              <span class="material-icons tick"> check_circle </span>
+              <span class="material-icons error"> error </span>
               <span class="tool-tip tool-tip-confirm"
                 >Passwords must match</span
               >
@@ -105,6 +143,7 @@
 
             <div class="button-wrap">
               <button type="submit" data-submit-button>Sign up</button>
+              <div class="error-message"></div>
               <p class="log-in">
                 Already have an account? <a href="#">Log in</a>
               </p>

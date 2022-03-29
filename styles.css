@@ -120,18 +120,9 @@ input:focus {
   border: 2px solid #343a40;
 }
 
-input[type="text"]:valid,
-input[type="email"]:valid,
-input[type="tel"]:valid {
-  border: 2px solid green;
-}
-
-#pword:valid {
-  border: 2px solid green;
-}
-
 .password-wrap,
-.confirm-wrap {
+.confirm-wrap,
+.input-wrap {
   position: relative;
   display: inline-block;
 }
@@ -162,8 +153,13 @@ input[type="tel"]:valid {
   border-color: hsl(240, 1%, 82%) transparent transparent transparent;
 }
 
-.password-wrap:hover .tool-tip,
+/* .password-wrap:hover .tool-tip,
 .confirm-wrap:hover .tool-tip {
+  visibility: visible;
+  opacity: 1;
+} */
+
+.input-wrap:hover .tool-tip {
   visibility: visible;
   opacity: 1;
 }
@@ -202,6 +198,20 @@ button:hover {
 .log-in a {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.tick {
+  position: absolute;
+  right: 5px;
+  top: 22px;
+  visibility: hidden;
+}
+
+.error {
+  position: absolute;
+  right: 5px;
+  top: 22px;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 1250px) {
